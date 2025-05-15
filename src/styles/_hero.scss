@@ -1,0 +1,51 @@
+.hero {
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/fundo.png);
+    background-repeat: no-repeat; // para não repetir a imagem
+    background-size: cover; // para cobrir todo o tamanho
+    position: relative;
+
+    .container { // para o elemento ficar na frente do "escurecedor"
+        position: relative;
+    }
+
+    &::before { //* "elemento escurecedor"
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .7; // equivale a 70%
+        content: '';
+    }
+
+    &__text {
+        margin: 64px 0; // lembrando que sempre começa pelo margin-top
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 56px;
+        text-align: center;
+    }
+
+    &__logo {
+        margin: 0 auto;
+        height: 80px;
+        display: block;
+    }
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+
+        &__logo {
+            height: 40px;
+        }
+
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.infos-bar {
+    padding: 16px 24px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+
+    &__infos {
+        display: flex;
+        gap: 40px; // espaçamento entre elementos
+
+        &__item {
+            color: black;
+            font-size: 14px;
+
+            b {
+                color: black;
+                font-size: 18px;
+                display: block; // por padrão a tag "b" tem o display inline
+            }
+        }
+    }
+
+    @media (max-width: 640px) { // display no celular
+        display: block;
+
+        &__infos {
+            display: block;
+
+            &__item {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__infos {
+            gap: 16px;
+        }
+    }
+}

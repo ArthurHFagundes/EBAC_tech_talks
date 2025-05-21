@@ -1,6 +1,8 @@
+@use '../variables';
+
 .infos-bar {
     padding: 16px 24px;
-    background-color: white;
+    background-color: variables.$textColor;
     display: flex;
     justify-content: space-between;
 
@@ -9,11 +11,11 @@
         gap: 40px; // espaçamento entre elementos
 
         &__item {
-            color: black;
+            color: variables.$textColorInfos;
             font-size: 14px;
 
             b {
-                color: black;
+                color: variables.$textColorInfos;
                 font-size: 18px;
                 display: block; // por padrão a tag "b" tem o display inline
             }
